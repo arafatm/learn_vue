@@ -46,6 +46,44 @@ applications composed of small, self-contained, and often reusable components.
 
 ## The Vue Instance
 
+### Data and Methods
+
+When a Vue instance is created, it adds all the properties found in its data
+object to Vue’s reactivity system. When the values of those properties change,
+the view will “react” 
+
+It should be noted that properties in data are only reactive if they existed
+when the instance was created. 
+- If you know you’ll need a property later, but it starts out empty or
+  non-existent, you’ll need to set some initial value.
+
+The only exception to this being the use of `Object.freeze()`, which prevents
+existing properties from being changed, which also means the reactivity system
+can’t track changes.
+
+Vue instances expose a number of useful instance properties and methods. These
+are prefixed with $ to differentiate them from user-defined properties.
+
+e.g. `$data`, `$el`, `$watch`
+
+```javascript
+
+var data = { a: 1 }
+
+var vm = new Vue({
+  el: '#example',
+  data: data
+})
+
+vm.$data === data // => true
+vm.$el === document.getElementById('example') // => true
+
+// $watch is an instance method
+vm.$watch('a', function (newValue, oldValue) {
+  // This callback will be called when `vm.a` changes
+})
+```
+
 xxx
 
 ## Template Syntax
