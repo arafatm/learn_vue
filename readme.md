@@ -4,10 +4,17 @@ https://vuejs.org/v2/guide/
 
 ## Introduction
 
-## Declarative Rendering
+### Declarative Rendering
 
 [Hello World](https://github.com/arafatm/learn_vue/commit/1568792a75319bac75195ca5003a50c13f98bd85)
 - `{{ message }}` to render bound data
+
+[Dynamically bound title](https://github.com/arafatm/learn_vue/commit/e7c84d91f9f5898256fb7e9ed65300ef29744d48)
+- `<span v-bind:title="message">`
+- The `v-bind` attribute you are seeing is called a **directive**.  Directives
+  are prefixed with `v-` to indicate that they are special attributes
+
+### Conditionals and Loops
 
 xxx
 
