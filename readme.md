@@ -33,7 +33,9 @@ loop through array with `v-for`
 `v-on` directive to attach event listeners that invoke methods
 
 [:ship: 5217973](https://github.com/arafatm/learn_vue/commit/5217973)
-2-way binding with
+2-way binding with `v-model`
+
+### Composing with Components
 
 xxx
 
