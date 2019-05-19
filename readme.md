@@ -21,6 +21,9 @@ toggle element presence [:ship: c9d4df0](https://github.com/arafatm/learn_vue/co
 - in console `app3.seen = false` to hide the element
 
 loop through array with `v-for` [:ship: 95fee57](https://github.com/arafatm/learn_vue/commit/95fee57)
+- in console `app4.todos.push({ text: 'New item' })` to see live render
+
+### Handling User Input
 
 xxx
 
