@@ -37,6 +37,9 @@ loop through array with `v-for`
 
 ### Composing with Components
 
+**Component** is an abstraction that allows us to build large-scale
+applications composed of small, self-contained, and often reusable components.
+
 xxx
 
 ## The Vue Instance
