@@ -25,6 +25,8 @@ loop through array with `v-for` [:ship: 95fee57](https://github.com/arafatm/lear
 
 ### Handling User Input
 
+[:ship: fbd5143](https://github.com/arafatm/learn_vue/commit/fbd5143) v-on directive to attach event listeners that invoke methods
+
 xxx
 
 ## The Vue Instance
