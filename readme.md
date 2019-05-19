@@ -40,6 +40,9 @@ loop through array with `v-for`
 **Component** is an abstraction that allows us to build large-scale
 applications composed of small, self-contained, and often reusable components.
 
+[:ship: 3f790fd](https://github.com/arafatm/learn_vue/commit/3f790fd)
+`component` example
+
 xxx
 
 ## The Vue Instance
