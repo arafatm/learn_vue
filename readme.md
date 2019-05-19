@@ -217,12 +217,12 @@ While computed properties are more appropriate in most cases, there are times
 when a custom watcher is necessary. e.g. when you want to perform asynchronous
 or expensive operations in response to changing data.
 
-
 [:ship: f3348dd](https://github.com/arafatm/learn_vue/commit/f3348dd)
 watcher example
 
-xxx
 ## Class and Style Bindings
+
+xxx
 ## Conditional Rendering
 ## List Rendering
 ## Event Handling
