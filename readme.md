@@ -4,6 +4,11 @@ https://vuejs.org/v2/guide/
 
 ## Introduction
 
+## Declarative Rendering
+
+[Hello World](https://github.com/arafatm/learn_vue/commit/1568792a75319bac75195ca5003a50c13f98bd85)
+- `{{ message }}` to render bound data
+
 xxx
 
 ## The Vue Instance
