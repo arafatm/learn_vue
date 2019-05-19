@@ -84,9 +84,27 @@ vm.$watch('a', function (newValue, oldValue) {
 })
 ```
 
-xxx
+### Instance Lifecycle Hooks
+
+e.g. `created`, `mounted`, `updated`, `destroyed`
+
+```
+new Vue({
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` points to the vm instance
+    console.log('a is: ' + this.a)
+  }
+})
+// => "a is: 1"
+```
+
+![Lifecycle Diagram](lifecycle.png)
 
 ## Template Syntax
+xxx
 ## Computed Properties and Watchers
 ## Class and Style Bindings
 ## Conditional Rendering
