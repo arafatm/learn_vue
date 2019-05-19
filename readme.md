@@ -104,6 +104,70 @@ new Vue({
 ![Lifecycle Diagram](lifecycle.png)
 
 ## Template Syntax
+
+`<span>Message: {{ msg }}</span>` **mustache**
+
+`v-once` to only render once and not update on data change
+
+`v-html` to render raw html
+
+`v-bind` for HTML attributes
+
+Using JS Expressions
+```
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<div v-bind:id="'list-' + id"></div>
+```
+
+Only **one single expression** works. The following DOESN'T
+```
+<!-- this is a statement, not an expression: -->
+{{ var a = 1 }}
+
+<!-- flow control won't work either, use ternary expressions -->
+{{ if (ok) { return message } }}
+```
+
+### Directives
+
+**Directives** are special attributes with the `v-` prefix and are expected to be a **single JavaScript expression**
+
+Some directives can take an **argument**, denoted by a colon after the directive name.
+- `<a v-bind:href="url"> ... </a>`
+- `<a v-on:click="doSomething"> ... </a>`
+
+**Dynamic Arguments**: it is also possible to use a JavaScript expression in a
+directive argument by wrapping it with square brackets:
+- `<a v-bind:[attributeName]="url"> ... </a>`
+
+Can also use dynamic arguments to bind a handler to a dynamic event name:
+`<a v-on:[eventName]="doSomething"> ... </a>`
+- When `eventName` is `focus`, it's equivalent to `v-on:focus`
+
+**Modifiers** are special postfixes denoted by a dot, which indicate that a
+directive should be bound in some special way. 
+
+In this example, `.prevent` tells `v-on` directive to call
+`event.preventDefault()` on the triggered event 
+- `<form v-on:submit.prevent="onSubmit"> ... </form>`
+
+### Shorthands
+
+`v-bind` Shorthand
+- full syntax `<a v-bind:href="url"> ... </a>`
+- shorthand `<a :href="url"> ... </a>`
+- shorthand with dynamic argument `<a :[key]="url"> ... </a>`
+
+`v-on` Shorthand
+- full syntax `<a v-on:click="doSomething"> ... </a>`
+- shorthand `<a @click="doSomething"> ... </a>`
+- shorthand with dynamic argument `<a @[event]="doSomething"> ... </a>`
+
 xxx
 ## Computed Properties and Watchers
 ## Class and Style Bindings
