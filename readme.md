@@ -66,7 +66,7 @@ are prefixed with $ to differentiate them from user-defined properties.
 
 e.g. `$data`, `$el`, `$watch`
 
-```javascript
+```js
 
 var data = { a: 1 }
 
@@ -168,8 +168,57 @@ In this example, `.prevent` tells `v-on` directive to call
 - shorthand `<a @click="doSomething"> ... </a>`
 - shorthand with dynamic argument `<a @[event]="doSomething"> ... </a>`
 
-xxx
 ## Computed Properties and Watchers
+
+Use a `computed` property. E.g. `{{ reversedMessage }}` with
+```js
+var vm = new Vue({
+  el: '#example',
+	data: {
+		message: 'Hello'
+	},
+	computed: {
+		// a computed getter
+		reversedMessage: function () {
+			// `this` points to the vm instance
+			return this.message.split('').reverse().join('')
+		}
+	}
+})
+```
+
+**Computed Caching vs Methods**
+
+We can achieve the same result by invoking a method in the expression:
+```html
+<p>Reversed message: "{{ reverseMessage() }}"</p>
+```
+```js
+// in component
+methods: {
+  reverseMessage: function () {
+    return this.message.split('').reverse().join('')
+  }
+}
+```
+
+However, **computed properties are cached based on their reactive
+dependencies**. So using `Date.now()` in a computeed property will never update
+because it's not a reactive dependency
+
+**watch properties**: When you have some data that needs to change based on
+some other data
+
+Computed properties are by **default getter**-only. Use `set: function (...)` for setters
+
+### Watchers
+
+While computed properties are more appropriate in most cases, there are times
+when a custom watcher is necessary. e.g. when you want to perform asynchronous
+or expensive operations in response to changing data.
+
+
+xxx
 ## Class and Style Bindings
 ## Conditional Rendering
 ## List Rendering
