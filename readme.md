@@ -42,10 +42,12 @@ applications composed of small, self-contained, and often reusable components.
 
 [:ship: 3f790fd](https://github.com/arafatm/learn_vue/commit/3f790fd)
 `component` example
+- `prop` is used to bind the repeated component using `v-bind`
+
+## The Vue Instance
 
 xxx
 
-## The Vue Instance
 ## Template Syntax
 ## Computed Properties and Watchers
 ## Class and Style Bindings
