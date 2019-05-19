@@ -16,6 +16,8 @@ https://vuejs.org/v2/guide/
 
 ### Conditionals and Loops
 
+toggle element presence [:ship: c9d4df0](https://github.com/arafatm/learn_vue/commit/c9d4df0)
+
 xxx
 
 ## The Vue Instance
